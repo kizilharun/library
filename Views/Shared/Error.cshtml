@@ -1,0 +1,21 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+<div class="container">
+    <main role="main" class="pb-3">
+        <div class="col-md-12 offset-md-2" style="margin-top : 4%">
+            <h1 class="text-danger">Hata.</h1>
+            <h2 class="text-danger">İsteğiniz gerçekleştirilirken bir hata oluştu.</h2>
+
+            @if (Model.ShowRequestId)
+            {
+                <p style="color:white">
+                    <strong>Request ID:</strong> <code>@Model.RequestId</code>
+                </p>
+            }
+            <h2 class="text-success">Lütfen Ana Sayfaya Dön Butonuna Tıklayınız.</h2>
+
+        </div>
+    </main>
+</div>

@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "AddBook";
+}
+
+<div class="container">
+    <main role="main" class="pb-3">
+        <div class="col-md-12 offset-md-2" style="margin-top : 4%">
+
+            <h1 style="color:white;">Yeni Kitap Ekle</h1>
+
+            <form method="post" action="SaveNewBook" style="margin-top : 6%" enctype="multipart/form-data">
+                <div class="form-group col-8" style="margin-top : 0.5em">
+                    <label for="book_name" class="col-sm-2 col-form-label" style="color :white;">Kitap Adı</label>
+                    <input style="margin-top : 0.5em" type="text" class="form-control" id="book_name" name="book_name" placeholder="Kitap Adını Giriniz" required>
+                </div>
+                <div class="form-group col-8" style="margin-top : 0.5em">
+                    <label for="book_author" class="col-sm-3 col-form-label" style="color :white;">Kitap Yazarı </label>
+                    <input style="margin-top : 0.5em" type="text" class="form-control" id="book_author" name="book_author" placeholder="Kitap Yazarını Giriniz" required>
+                </div>
+                <div class="form-group col-8" style="margin-top : 0.5em">
+                    <label for="book_image" class="col-sm-3 col-form-label" style="color :white;">Kitap Resmi</label>
+                    <input style="margin-top : 0.5em" type="file" class="form-control" id="book_image" name="book_image" accept="image/*">
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="margin-top : 1em">Kitap Ekle</button>
+            </form>
+
+        </div>
+    </main>
+</div>

@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "BorrowBook";
+}
+
+<div class="container">
+    <main role="main" class="pb-3">
+        <div class="col-md-12 offset-md-2" style="margin-top : 4%">
+
+            <h1 style="color : white;">Kitap Ödünç Al</h1>
+
+            <form method="post" action="SaveNewBorrower" style="margin-top : 6%">
+
+                <div class="form-group col-8" style="margin-top : 0.5em">
+                    <label for="borrowed_book_id" class="col-sm-2 col-form-label" style="color: white;">Kitap Adı</label>
+                    <input type="text" id="book_name" name="book_name" class="form-control" value="@ViewBag.book_name" readonly />
+                    <input type="hidden" id="borrowed_book_id" name="borrowed_book_id" value="@ViewBag.book_id" />
+                </div>
+                <div class="form-group col-8" style="margin-top : 0.5em">
+                    <label for="borrower_name" class="col-sm-3 col-form-label" style="color :white;">Ödünç Alan Ad & Soyad </label>
+
+                    <input style="margin-top : 0.5em" type="text" class="form-control" id="borrower_name" name="borrower_name" placeholder="Ödünç Alan Ad & Soyad Giriniz" required>
+                </div>
+
+                <div class="form-group col-8" style="margin-top: 0.5em">
+                    <label for="return_date" class="col-sm-3 col-form-label" style="color: white;">Geri Getirme Tarihi </label>
+                    <input style="margin-top: 0.5em" type="date" class="form-control" id="return_date" name="return_date" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="margin-top : 1em">Ödünç Al</button>
+            </form>
+        </div>
+    </main>
+</div>
